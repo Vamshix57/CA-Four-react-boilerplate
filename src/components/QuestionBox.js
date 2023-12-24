@@ -9,6 +9,7 @@ function QuestionBox() {
   const [count, setCount] = useState(0);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [highlightedOptions, setHighlightedOptions] = useState([]);
+  const [highlightButtonText, setHighlightButtonText] = useState("Highlight");
 
   const ClickOption = (selectedOption) => {
     const correctOption = questions[q_no].answer;
@@ -34,6 +35,24 @@ function QuestionBox() {
     setIsDarkMode(!isDarkMode);
   };
 
+  const highlightQuestion = () => {
+    const isAlreadyHighlighted = highlightedOptions.some(
+      (option) => option.q_no === q_no && option.highlighted
+    );
+
+    if (isAlreadyHighlighted) {
+      setHighlightedOptions(
+        highlightedOptions.filter(
+          (option) => !(option.q_no === q_no && option.highlighted)
+        )
+      );
+      setHighlightButtonText("Highlight");
+    } else {
+      setHighlightedOptions([...highlightedOptions, { q_no, highlighted: true }]);
+      setHighlightButtonText("Diminish");
+    }
+  };
+
   const Question = questions[q_no];
 
   if (isResult) {
@@ -56,7 +75,13 @@ function QuestionBox() {
         <h4>
           {q_no + 1} of {questions.length}
         </h4>
-        <h2>{Question.question}</h2>
+        <h2
+          className={highlightedOptions.some(
+            (option) => option.q_no === q_no && option.highlighted
+          ) ? "highlighted-question" : ""}
+        >
+          {Question.question}
+        </h2>
         <div className="buttons">
           {Question.options.map((option, index) => (
             <button
@@ -67,7 +92,9 @@ function QuestionBox() {
               {option.text}
             </button>
           ))}
-          <button className="highlight">Highlight Question</button>
+          <button className="highlight" onClick={highlightQuestion}>
+            {highlightButtonText}
+          </button>
           <button className="quit">Quit</button>
         </div>
       </div>
