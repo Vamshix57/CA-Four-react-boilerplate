@@ -1,50 +1,57 @@
 const questions = [
   {
-    text: "What is ReactJS?",
+    question: "Who is the leader of the Autobots?",
     options: [
-      { id: 0, text: "Server-side framework", isCorrect: false },
-      { id: 1, text: "user interface framework", isCorrect: true },
-      { id: 2, text: "both a and b", isCorrect: false },
-      { id: 3, text: "none of the above", isCorrect: false },
+      { optionA: 0, text: "A) Megatron" },
+      { optionB: 1, text: "B) Optimus Prime" },
+      { optionC: 2, text: "C) Bumblebee" },
+      { optionD: 3, text: "D) Starscream" },
     ],
+    answer: 1,
   },
 
   {
-    text: "React.js is written in which of the following language?",
+    question: "Which planet do the Transformers come from?",
     options: [
-      { id: 0, text: "JavaScript", isCorrect: "fill a boolean value here like shown in the first question" },
-      { id: 1, text: "Java", isCorrect:  "fill a boolean value here like shown in the first question" },
-      { id: 2, text: "C", isCorrect:  "fill a boolean value here like shown in the first question" },
-      { id: 3, text: "C++", isCorrect:  "fill a boolean value here like shown in the first question" },
+      { optionA: 0, text: "A) Earth" },
+      { optionB: 1, text: "B) Cybertron" },
+      { optionC: 2, text: "C) Nebulos" },
+      { optionD: 3, text: "D) Quintessa" },
     ],
+    answer: 1,
   },
   {
-    text: "What is a state in React?",
+    question:
+      "What is the name of the energy source that powers the Transformers?",
     options: [
-      { id: 0, text: "A permanent storage.", isCorrect:  "fill a boolean value here like shown in the first question" },
-      { id: 1, text: "Internal storage of the component.", isCorrect: "fill a boolean value here like shown in the first question" },
-      { id: 2, text: "External storage of the component.", isCorrect:  "fill a boolean value here like shown in the first question" },
-      { id: 3, text: "None of the above.", isCorrect:  "fill a boolean value here like shown in the first question" },
+      { optionA: 0, text: "A) Energon" },
+      { optionB: 1, text: "B) Poweron" },
+      { optionC: 2, text: "C) Cyberium" },
+      { optionD: 3, text: "D) Techno-fuel" },
     ],
+    answer: 0,
   },
-  
+
   {
-    text: "What is the return value of the useState hook?",
+    question:
+      "Which Transformer is known for transforming into a red sports car?",
     options: [
-      { id: 0, text: " Pair of current state and function updating it", isCorrect: "fill a boolean value here like shown in the first question" },
-      { id: 1, text: "Current State", isCorrect:  "fill a boolean value here like shown in the first question" },
-      { id: 2, text: "Function updating the current state", isCorrect:  "fill a boolean value here like shown in the first question" },
-      { id: 3, text: "UseState returns nothing", isCorrect:  "fill a boolean value here like shown in the first question" },
+      { optionA: 0, text: "A) Ironhide" },
+      { optionB: 1, text: "B) Jazz" },
+      { optionC: 2, text: "C) Sideswipe" },
+      { optionD: 3, text: "D) Cliffjumper" },
     ],
+    answer: 2,
   },
   {
-    text: "How many elements can a valid react component return?",
+    question: "What is the function of Soundwave among the Decepticons?",
     options: [
-      { id: 0, text: "1", isCorrect: "fill a boolean value here like shown in the first question" },
-      { id: 1, text: "2", isCorrect:  "fill a boolean value here like shown in the first question" },
-      { id: 2, text: "3", isCorrect:  "fill a boolean value here like shown in the first question" },
-      { id: 3, text: "4", isCorrect:  "fill a boolean value here like shown in the first question" },
+      { optionA: 0, text: "A) Communications" },
+      { optionB: 1, text: "B) Warrior" },
+      { optionC: 2, text: "C) Scientist" },
+      { optionD: 3, text: "D) Strategist" },
     ],
+    answer: 1,
   },
 ];
 
